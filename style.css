@@ -1,0 +1,164 @@
+body {
+    background-color: #050210;
+    overflow: hidden;
+    
+}
+
+.outer-circle {
+    background: linear-gradient(#fb5dad, #55fb97, #b97aff);
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -200px 0px 0px -200px;
+
+        animation-name: spinning;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+}
+
+.inner-circle {
+    position: absolute;
+    background: #050210;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    margin: -175px 0px 0px -175px;
+}
+
+.outer-circle::before {
+    position: absolute;
+    content: "";
+    background: linear-gradient(#fb5dad, #55fb97, #b97aff);
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    margin: -225px 225px 225px -225px;
+    filter: blur(70px);
+}
+ 
+.inner-circle::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    margin: -175px 175px 175px -175px;
+    background-color: #1f1445;
+    border-radius: 50%;
+
+    animation-name: pulse-ring;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+  
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-ring {
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+        10% {
+            transform: scale(0.1);
+            opacity: 0.9;
+        }
+    20% {
+        transform: scale(0.2);
+        opacity: 0.8;
+        }
+        30% {
+        transform: scale(0.3);
+        opacity: 0.7;
+        }
+    40% {
+        transform: scale(0.4);
+        opacity: 0.6;
+        }
+        50% {
+            transform: scale(0.5);
+            opacity: 0.5;
+        }
+    60% {
+        transform: scale(0.6);
+        opacity: 0.4;
+        }
+        70% {
+            transform: scale(0.7);
+            opacity: 0.3;
+        }
+    80% {
+        transform: scale(0.8);
+        opacity: 0.2;
+        }
+        90% {
+            transform: scale(0.9);
+            opacity: 0.1;
+        }
+        91% {
+        transform: scale(0.91);
+        opacity: 0.09;
+        }
+        92% {
+        transform: scale(0.92);
+        opacity: 0.08;
+        }
+        93% {
+            transform: scale(0.93);
+            opacity: 0.07;
+        }
+        94% {
+            transform: scale(0.94);
+            opacity: 0.06;
+        }
+        95% {
+            transform: scale(0.95);
+            opacity: 0.05;
+        }
+        96% {
+            transform: scale(0.96);
+            opacity: 0.04;
+        }
+        97% {
+            transform: scale(0.97);
+            opacity: 0.03;
+        }
+        98% {
+            transform: scale(0.98);
+            opacity: 0.02;
+        }
+        99% {
+            transform: scale(0.99);
+            opacity: 0.01;
+        }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    } 
+}
+
+
+
+
+
+
+
+
+
